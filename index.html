@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aaaaaaaaaa</title>
+    <style>
+        body {
+            background-color: burlywood;
+        }
+        div {
+            border-radius: 25px;
+        }
+    </style>
+</head>
+<script>
+    let shit = false;
+    let count = 0;
+    function nenen() {
+        if (Math.floor(Math.random() * 2) === 1)
+        {
+            shit = true
+            console.log("a")
+        }
+        else {
+            shit = false
+            console.log("b")
+        }
+        if (shit) {
+            document.getElementById("indicator").style.backgroundColor = "red"
+        }
+        else {
+            document.getElementById("indicator").style.backgroundColor = "green"
+        }
+        count++
+        document.getElementById("metr").value = count
+        if (count < 16) {
+        setTimeout(nenen, 250)
+        }
+        else {
+            count = 0
+            if (shit) {
+                setTimeout(abd, 1000)
+            }
+        }
+
+    }
+    function abd() {
+        a = Math.floor(Math.random() * 1920);
+        b = Math.floor(Math.random() * 1080);
+
+
+        window.open(
+    'https://img1.picmix.com/output/stamp/normal/7/6/3/9/2429367_71d43.gif',
+     'popup',
+    'width=600,height=400,left=' + String(a) + ',top=' + String(b) + ',noopener'
+    );
+    setTimeout(abd(), 1000)
+
+    }
+</script>
+<body><center>
+    <h1>russian roullete</h1>
+    <div style="width: 300px;height: 300px; background-color: white;" id="indicator"></div>
+        <meter value="0", max="15" id="metr"></meter>
+
+    <br>
+    <button onclick="nenen()">spin</button>
+    </center>   
+</body>
+</html>

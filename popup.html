@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>幹得好</title>
+    <style>
+        #did {
+            position: absolute;
+            top: 60px;
+            left: 180px;
+            font-size: 50px;
+            color: white;
+            text-shadow: 5px 5px 5px black;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <img src="popup.png" alt="popup">
+    <h2 id="did">+15</h2>
+    </div>
+    <script>
+        let params = new URLSearchParams(document.location.search);
+        let b = params.get("socialcredit");  
+        document.getElementById("did").innerHTML = `+${b}`;
+    </script>
+</body>
+</html>
